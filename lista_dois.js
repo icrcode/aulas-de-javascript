@@ -1,19 +1,15 @@
 function atividade11() {
     console.log("11. Verificação de Número Positivo ou Negativo");
-    function verificarSinal(num) {
-        if (num > 0) console.log("Positivo");
-        else if (num < 0) console.log("Negativo");
-        else console.log("Zero");
-    }
-    verificarSinal(-3); 
+    let num = parseFloat(prompt("Digite um número:"));
+    if (num > 0) console.log("Positivo");
+    else if (num < 0) console.log("Negativo");
+    else console.log("Zero");
 }
 
 function atividade12() {
     console.log("12. Converter Celsius em Fahrenheit");
-    function converterTemperatura(celsius) {
-        return (celsius * 9 / 5) + 32;
-    }
-    console.log("Fahrenheit:", converterTemperatura(25)); 
+    let celsius = parseFloat(prompt("Digite a temperatura em Celsius:"));
+    console.log("Fahrenheit:", (celsius * 9 / 5) + 32);
 }
 
 function atividade13() {
@@ -28,18 +24,14 @@ function atividade13() {
 
 function atividade14() {
     console.log("14. Substituição de Palavras em String");
-    function substituirPalavra(texto) {
-        return texto.replace(/azul/g, "vermelho");
-    }
-    console.log(substituirPalavra("O carro azul está na casa azul."));
+    let texto = prompt('Digite uma frase com a palavra "azul":');
+    console.log(texto.replace(/azul/g, "vermelho"));
 }
 
 function atividade15() {
     console.log("15. Verificação de Tamanho de String");
-    function verificarTamanho(str) {
-        console.log(str.length > 10 ? "Mais de 10 caracteres" : "10 ou menos caracteres");
-    }
-    verificarTamanho("JavaScript!"); 
+    let texto = prompt("Digite uma string:");
+    console.log(texto.length > 10 ? "Mais de 10 caracteres" : "10 ou menos caracteres");
 }
 
 function atividade16() {
@@ -50,54 +42,42 @@ function atividade16() {
 
 function atividade17() {
     console.log("17. Função com Valor Padrão em Dois Parâmetros");
-    function saudacao(nome, saudacao = "Bem-vindo(a)") {
-        return `${saudacao}, ${nome}`;
-    }
-    console.log(saudacao("Carlos"));
-    console.log(saudacao("Maria", "Olá"));
+    let nome = prompt("Digite o nome:");
+    let saud = prompt("Digite a saudação (ou deixe em branco para 'Bem-vindo(a)'):");
+    saud = saud || "Bem-vindo(a)";
+    console.log(`${saud}, ${nome}`);
 }
 
 function atividade18() {
     console.log("18. Verificação de Nota");
-    function verificarAprovacao(nota) {
-        return nota >= 6 ? "Aprovado" : "Reprovado";
-    }
-    console.log(verificarAprovacao(7));
-    console.log(verificarAprovacao(5));
+    let nota = parseFloat(prompt("Digite a nota:"));
+    console.log(nota >= 6 ? "Aprovado" : "Reprovado");
 }
 
 function atividade19() {
     console.log("19. Laço for para Contagem de Pares");
     for (let i = 0; i <= 30; i++) {
-        if (i % 2 === 0) {
-            console.log(i);
-        }
+        if (i % 2 === 0) console.log(i);
     }
 }
 
 function atividade20() {
     console.log("20. Contagem de Vogais");
-    function contarVogais(palavra) {
-        const vogais = palavra.match(/[aeiouAEIOU]/g);
-        return vogais ? vogais.length : 0;
-    }
-    console.log("Vogais:", contarVogais("Javascript"));
+    let palavra = prompt("Digite uma palavra:");
+    const vogais = palavra.match(/[aeiouAEIOU]/g);
+    console.log("Quantidade de vogais:", vogais ? vogais.length : 0);
 }
 
 function atividade21() {
     console.log("21. Soma dos Elementos de um Array");
-    function somarArray(arr) {
-        return arr.reduce((acc, val) => acc + val, 0);
-    }
-    console.log("Soma:", somarArray([1, 2, 3, 4, 5]));
+    let valores = prompt("Digite números separados por vírgula:").split(",").map(Number);
+    console.log("Soma:", valores.reduce((acc, val) => acc + val, 0));
 }
 
 function atividade22() {
     console.log("22. Função para Dobrar Números");
-    function dobrarNumero(num) {
-        return num * 2;
-    }
-    console.log("Dobro:", dobrarNumero(7));
+    let num = parseFloat(prompt("Digite um número:"));
+    console.log("Dobro:", num * 2);
 }
 
 function atividade23() {
@@ -111,17 +91,13 @@ function atividade23() {
 
 function atividade24() {
     console.log("24. Capitalizar Primeira Letra");
-    function capitalizar(str) {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-    console.log(capitalizar("javascript"));
+    let texto = prompt("Digite uma palavra:");
+    console.log(texto.charAt(0).toUpperCase() + texto.slice(1));
 }
 
 function atividade25() {
     console.log("25. Verificação de Ano Bissexto");
-    function anoBissexto(ano) {
-        return (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
-    }
-    console.log("2024 é bissexto?", anoBissexto(2024));
-    console.log("2023 é bissexto?", anoBissexto(2023));
+    let ano = parseInt(prompt("Digite o ano:"));
+    let bissexto = (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
+    console.log("É bissexto?", bissexto);
 }
