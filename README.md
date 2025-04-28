@@ -1,2 +1,3 @@
-# javascript-25
-Algumas atividades de javascripts desenvolvidas em sala.
+# Repositório focado no ensino da linguagem JS.
+
+Coloco aqui tudo que desenvolvo em JS para as aulas. 
